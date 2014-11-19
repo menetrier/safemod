@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+var safemod = require('../lib/safemod');
+
+safemod();
