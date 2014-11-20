@@ -1,5 +1,19 @@
 #!/usr/bin/env node
 
+'use strict'
+
 var safemod = require('../lib/safemod');
 
-safemod();
+var options = process.argv.slice(2).reduce(function(object, parameter) {
+  if (parameter === '-R') {
+    object['recursive'] = true;
+  } else {
+    object['directoryList'].push(parameter);
+  }
+
+  return object;
+}, {directoryList: [], recursive: false, mappingFile: '/etc/safemod-mapping'});
+
+// Run with options
+
+new safemod(options);

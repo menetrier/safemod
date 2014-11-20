@@ -3,22 +3,22 @@
   "version": "0.0.1",
   "description": "A safer chmod utility.",
   "main": "./lib/safemod.js",
-
   "bin": {
     "safemod": "./bin/safemod"
   },
-
   "repository": {
     "type": "git",
     "url": "https://github.com/menetrier/safemod"
   },
-
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha test/test-suite.js"
   },
-
   "devDependencies": {
-    "chai": ">= 1.10.0",
-    "mocha": ">= 2.0.1"
+    "chai": "~1.10.0",
+    "mocha": "~2.0.1",
+    "mock-fs": "~2.3.2"
+  },
+  "dependencies": {
+    "minimist": "~1.1.0"
   }
 }
