@@ -12,7 +12,7 @@ var options = process.argv.slice(2).reduce(function(object, parameter) {
   }
 
   return object;
-}, {directoryList: [], recursive: false, mappingFile: '/etc/safemod-mapping'});
+}, {directoryList: [], recursive: false, mappingFile: '~/safemod-mapping'});
 
 // Run with options
 
